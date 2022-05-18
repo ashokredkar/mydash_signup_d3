@@ -1,0 +1,164 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.signup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: max-content;
+
+    .signup__left {
+        flex: 1.2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .signup__img {
+            width: 80%;
+        }
+
+        .signup__left_info {
+            text-align: center;
+            width: 60%;
+
+            h2 {
+                font-weight: 500;
+                color: rgb(25, 25, 25);
+                margin-bottom: 0.7rem;
+            }
+
+            p {
+                font-weight: 300;
+                color: rgb(70, 70, 70);
+            }
+        }
+    }
+
+    .signup__right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        height: 100%;
+
+        .signup__card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            width: 100%;
+
+            padding: 4rem;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px 2px rgb(194, 194, 194);
+
+            h2 {
+                margin-bottom: 2.5rem;
+                font-weight: 500;
+                font-size: 27px;
+            }
+
+            label {
+                margin-top: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                padding: 0.6rem 1.2rem;
+                width: 100%;
+                background: white;
+                border: 2px solid rgb(223, 223, 223);
+                border-radius: 10px;
+                z-index: 1000;
+            }
+            .errorMsg{
+                color: red;
+            }
+
+            input[type=checkbox] {
+                width: 1rem;
+                margin-right: 0.5rem;
+                height: 22px;
+                color: rgb(0, 166, 255);
+            }
+
+            // input[type = checkbox]:checked{
+            //     background-color: green;
+            // }
+
+            .card__terms {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                margin-top: 1.2rem;
+
+                p {
+                    color: black;
+                    font-weight: 500;
+                }
+            }
+
+            .card__btn {
+                background: rgb(0, 166, 255);
+                color: white;
+                padding: 0.5rem 4rem;
+                font-size: 16px;
+                text-align: center;
+                font-weight: 500;
+                border-radius: 5px;
+                width: max-content;
+                margin: 2rem 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .signup {
+        flex-direction: column;
+        width: 100%;
+
+        .signup__right {
+            margin-top: 4rem;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .signup {
+
+        .signup__right {
+
+            .signup__card {
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .signup {
+
+        .signup__right {
+
+            .signup__card {
+                padding: 2rem;
+
+                .card__btn {
+                    width: 100%;
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+    }
+}
